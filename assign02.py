@@ -1,6 +1,7 @@
 import sys
 import os
 import magic
+import json
 
 class Dataset:
     """Main clasts"""
@@ -63,5 +64,5 @@ if __name__ == '__main__':
     path = sys.argv[1]
     myObject = Dataset(path)
     
-    print("File Stats: ", myObject.filestats)
+    print("File Stats: ", json.dumps(myObject.filestats, indent=4))
     # print(myObject.__str__())
